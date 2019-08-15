@@ -150,7 +150,7 @@ input {
     text-decoration: underline;
 }
 
-/* ------- PORTFOLIO PAGE ------- */
+/* ------- MEDIA QUERIES ------- */
 
 @media screen and (max-width: 980px) {
     .container {
@@ -168,7 +168,7 @@ input {
 }
 @media screen and (max-width: 640px) {
     .container {
-        width: 460px;
+        width: 420px;
         /* background-color: blue; */
     }
     header {
@@ -176,7 +176,7 @@ input {
     }
     #logo {
         width: 100%;
-        margin: 10px 0;
+        margin: 0px 0 10px 0;
         text-align: center;
     }
     nav {
@@ -201,4 +201,36 @@ input {
         margin-bottom: 0;
     }
 }
+
+/* ------- CSS ANIMATION ------- */
+
+
+#submit-btn {
+    position: relative;
+    animation-name: mymove;
+    animation-duration: 1s;
+    /* animation-fill-mode: forwards; */
+    animation-iteration-count: 1;
+  }
   
+  /* Safari 4.0 - 8.0 */
+  #submit-btn {-webkit-animation-timing-function: ease-out;}
+  
+  /* Standard syntax */
+  #submit-btn {animation-timing-function: ease-out;}
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes mymove {
+    from {bottom: -100px;}
+    to {bottom: 0px;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  /* Standard syntax */
+  @keyframes mymove {
+    from {bottom: -100px;}
+    to {bottom: 0px;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
